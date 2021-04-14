@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&family=Spartan:wght@400;500;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    
+--Very-Dark-Magenta: hsl(300, 43%, 22%);
+--Soft-Pink: hsl(333, 80%, 67%);
+
+--Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+--Light-Grayish-Magenta: hsl(300, 24%, 96%);
+--White: hsl(0, 0%, 100%);
+}
+
+
+body{
+    font-family: 'Spartan', sans-serif;
+    font-size: 15px;
+}
+
+.social-proof{
+    width: 100%;
+    height: 100vh;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    padding: 60px;
+    background: url(./images/bg-pattern-top-desktop.svg) left top no-repeat,
+                      url(./images/bg-pattern-bottom-desktop.svg) right bottom no-repeat;
+    background-size: 40% 40%, 80% 80%;
+}
+
+.upper-slide{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 70px;
+}
+
+.texts{
+    width: 48%;
+}
+.texts h1{
+    color: var(--Very-Dark-Magenta);
+    margin-bottom: 20px;
+    font-size: 40px;
+    line-height: 1;
+}
+
+.texts p{
+    color: var(--Soft-Pink);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+.rates{
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+}
+
+.rate-slice{
+    width: 80%;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: var(--Light-Grayish-Magenta);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.rate-sliceOne{
+    align-self: flex-start;
+}
+.rate-sliceTwo{
+    align-self: center;
+}
+.rate-sliceThree{
+    align-self: flex-end;
+}
+
+.icons img{
+    width: 10px;
+    height: 10px;
+}
+.rate-text{
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* =================lower-slide============= */
+.lower-slide{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card{
+    width: 32%;
+    height: 260px;
+    background-color: var(--Very-Dark-Magenta);
+    border-radius: 10px;
+    padding: 25px 35px;
+}
+
+.cardOne{
+    align-self: flex-start;
+}
+.cardTwo{
+    align-self: center;
+}
+.cardThree{
+    align-self: flex-end;
+}
+
+.card .person{
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 25px;
+}
+
+
+.card .person-img img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.card .person-info h3{
+    color:hsl(0, 0%, 100%);
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.card .person-info p{
+    color:var(--Dark-Grayish-Magenta);
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.card .person-qoate p{
+    color: var(--Light-Grayish-Magenta);
+    line-height: 1.4;
+}
+
+/* =============media-Query========== */
+
+@media screen and (max-width: 992px){
+    .container{
+        width: 100%;
+        height: 100%;
+        padding: 30px;
+        background: url(./images/bg-pattern-top-desktop.svg) left top no-repeat,
+                          url(./images/bg-pattern-bottom-desktop.svg) right bottom no-repeat;
+        background-size: 40% 40%, 80% 80%;
+    }
+
+    .card{
+        width: 32.5%;
+        height: 270px;
+        background-color: var(--Very-Dark-Magenta);
+        border-radius: 10px;
+        padding: 15px 10px;
+    }
+}
+@media screen and (max-width: 768px){
+    .social-proof{
+        height: auto;
+    }
+    
+    .container{
+        padding: 50px 20px;
+        background: url(./images/bg-pattern-top-mobile.svg) left top no-repeat,
+                          url(./images/bg-pattern-bottom-mobile.svg) right bottom no-repeat;
+        background-size: 40% 40%, 60% 60%;
+    }
+
+    .upper-slide{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+    
+    .texts{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .texts h1{
+        color: var(--Very-Dark-Magenta);
+        margin-bottom: 20px;
+        font-size: 38px;
+    }
+    
+    .rates{
+        width: 100%;
+    }
+    
+    .rate-slice{
+        padding: 5px;
+        width: 95%;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .rate-sliceOne{
+        align-self: center;
+    }
+    .rate-sliceTwo{
+        align-self: center;
+    }
+    .rate-sliceThree{
+        align-self:center;
+    }
+    
+    .icons img{
+        width: 15px;
+        height: 15px;
+    }
+    .rate-text{
+        margin-top: 5px;
+    }
+
+    .lower-slide{
+        height: auto;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .card{
+        width: 100%;
+        height: 270px;
+        padding: 20px;
+        margin-bottom: 10px;
+    }
+
+    .cardOne{
+        align-self: center;
+    }
+    .cardTwo{
+        align-self: center;
+    }
+    .cardThree{
+        align-self: center;
+    }
+    
+}
